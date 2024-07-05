@@ -156,16 +156,16 @@ input[type=text] {
 }
 
 .box {
-  width: 12rem;
-  height: 12rem;
+  width: 15rem;
+  height: 15rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .rectangle {
-  width: 12rem;
-  height: 12rem;
+  width: 15rem;
+  height: 15rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,7 +184,7 @@ input[type=text] {
 }
 
 .little_rectangle {
-  width: 12rem;
+  width: 15rem;
   display: flex;
   align-items: center;
   justify-content: center;

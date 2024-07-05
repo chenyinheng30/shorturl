@@ -118,6 +118,7 @@ function SetShortUrl(event: any) {
         </p>
         <p class="rectangle">
           <div class="cf-turnstile" data-sitekey="0x4AAAAAAAeVj-x7WycONaEu"></div>
+          <script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
         </p>
       </section>
       <Vue3NextQrcode :text="QrcodeText" :size=200 />

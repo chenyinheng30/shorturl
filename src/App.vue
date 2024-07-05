@@ -116,7 +116,7 @@ function SetShortUrl(event: any) {
           </div>
         </section>
         </p>
-        <p class="rectangle">cloudflare浏览器验证</p>
+        <div class="rectangle cf-turnstile" data-sitekey="yourSitekey" data-callback="javascriptCallback"></div>
       </section>
       <Vue3NextQrcode :text="QrcodeText" :size=200 />
     </section>

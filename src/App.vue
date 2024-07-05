@@ -81,6 +81,11 @@ function SetShortUrl(event: any) {
 </script>
 
 <template>
+  <h1>本站建设中</h1>
+  <p>
+    本站将部署短链接服务，原站点迁移至
+    <a href="https://blog.tenet.chat">blog.tenet.chat</a>
+  </p>
   <p>
     <input class="mono_wieght" type="text" placeholder="输入长链接" :value="LongUrl" @change="SetLongUrl">
   <div class="error_msg">{{ LongUrlInputMsg }}</div>

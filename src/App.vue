@@ -116,7 +116,9 @@ function SetShortUrl(event: any) {
           </div>
         </section>
         </p>
-        <div class="rectangle cf-turnstile" data-sitekey="yourSitekey" data-callback="javascriptCallback"></div>
+        <p class="rectangle">
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAAAeVj-x7WycONaEu"></div>
+        </p>
       </section>
       <Vue3NextQrcode :text="QrcodeText" :size=200 />
     </section>

@@ -96,36 +96,34 @@ function SetShortUrl(event: any) {
   <div class="error_msg">{{ ShortUrlInputMsg }}</div>
   </p>
   <p class="mono_wieght center_parent">
-  <div>
-    <section class="row_section">
-      <section class="column_section box">
-        <p class="rectangle">
-        <section class="row_section little_rectangle">
-          <div>天</div>
-          <div>小时</div>
-          <div>分钟</div>
-        </section>
-        <section class="row_section little_rectangle">
-          <div>
-            <input class="select_time" type="text" />
-          </div>
-          <div>
-            <input class="select_time" type="text" />
-          </div>
-          <div>
-            <input class="select_time" type="text" />
-          </div>
-        </section>
-        </p>
-        <p class="rectangle">
-          <CloudflareTurnstile sitekey="0x4AAAAAAAeVj-x7WycONaEu" />
-        </p>
+  <section class="row_section">
+    <section class="column_section row_split center_parent">
+      <div class="column_split">
+      <section class="row_section">
+        <div class="row_split3">天</div>
+        <div class="row_split3">小时</div>
+        <div class="row_split3">分钟</div>
       </section>
-      <div class="box">
-        <Vue3NextQrcode :text="QrcodeText" :size=200 />
+      <section class="row_section">
+        <div class="row_split3">
+          <input class="select_time" type="text" />
+        </div>
+        <div class="row_split3">
+          <input class="select_time" type="text" />
+        </div>
+        <div class="row_split3">
+          <input class="select_time" type="text" />
+        </div>
+      </section>
       </div>
+      <a class="column_split">
+        <CloudflareTurnstile sitekey="0x4AAAAAAAeVj-x7WycONaEu" />
+      </a>
     </section>
-  </div>
+    <div class="row_split">
+      <Vue3NextQrcode :text="QrcodeText" :size=200 />
+    </div>
+  </section>
   </p>
 </template>
 
@@ -146,28 +144,20 @@ input[type=text] {
   flex-direction: row;
 }
 
+.row_split {
+  width: 50%;
+}
+
 .column_section {
   display: flex;
   flex-direction: column;
 }
 
+.column_split {
+  height: 50%;
+}
+
 .center_parent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.box {
-  width: 15rem;
-  height: 15rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.rectangle {
-  width: 15rem;
-  height: 15rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -185,17 +175,7 @@ input[type=text] {
   height: 1rem;
 }
 
-.little_rectangle {
-  width: 15rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.little_rectangle>div {
+.row_split3 {
   width: 33%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 </style>: { target: { value: any; }; }: { target: { value: any; }; }

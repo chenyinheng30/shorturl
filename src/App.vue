@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Vue3NextQrcode } from 'vue3-next-qrcode'
+import CloudflareTurnstile from './components/CloudflareTurnstile.vue'
 
 let LongUrl = ref("")
 let ShortUrl = ref("")
@@ -117,8 +118,7 @@ function SetShortUrl(event: any) {
         </section>
         </p>
         <p class="rectangle">
-          <div class="cf-turnstile" data-sitekey="0x4AAAAAAAeVj-x7WycONaEu"></div>
-          <script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
+          <CloudflareTurnstile sitekey="0x4AAAAAAAeVj-x7WycONaEu" />
         </p>
       </section>
       <Vue3NextQrcode :text="QrcodeText" :size=200 />

@@ -121,7 +121,9 @@ function SetShortUrl(event: any) {
           <CloudflareTurnstile sitekey="0x4AAAAAAAeVj-x7WycONaEu" />
         </p>
       </section>
-      <Vue3NextQrcode :text="QrcodeText" :size=200 />
+      <div class="box">
+        <Vue3NextQrcode :text="QrcodeText" :size=200 />
+      </div>
     </section>
   </div>
   </p>

@@ -9,8 +9,6 @@ let LongUrlInputMsg = ref("")
 let ShortUrlInputMsg = ref("")
 let QrcodeText = ref("https://tenet.chat")
 let RetentionDays = ref(7)
-let RetentionHours = ref(0)
-let RetentionMinutes = ref(0)
 
 function getUpperLetter(num: number) {
   return String.fromCharCode(64 + num);
@@ -98,27 +96,15 @@ function SetShortUrl(event: any) {
   <p class="mono_wieght center_parent">
   <section class="row_section">
     <section class="column_section row_split center_parent">
-      <div class="column_split">
-      <section class="row_section">
-        <div class="row_split3">天</div>
-        <div class="row_split3">小时</div>
-        <div class="row_split3">分钟</div>
-      </section>
-      <section class="row_section">
-        <div class="row_split3">
-          <input class="select_time" type="text" />
-        </div>
-        <div class="row_split3">
-          <input class="select_time" type="text" />
-        </div>
-        <div class="row_split3">
-          <input class="select_time" type="text" />
-        </div>
-      </section>
+      <div>
+        <span >短链接将保留 </span>
+        <span v-text="RetentionDays"></span>
+        <span > 天</span>
+        <v-slider v-model="RetentionDays" :step="1" :max="30" :min="1" />
+        <p class="column_split">
+          <CloudflareTurnstile sitekey="0x4AAAAAAAeVj-x7WycONaEu" />
+        </p>
       </div>
-      <a class="column_split">
-        <CloudflareTurnstile sitekey="0x4AAAAAAAeVj-x7WycONaEu" />
-      </a>
     </section>
     <div class="row_split">
       <Vue3NextQrcode :text="QrcodeText" :size=200 />

@@ -1,8 +1,18 @@
-import { createApp } from 'vue'
 import './style.css'
-import App from './App.vue'
-// import Vue3NextQrcode from 'vue3-next-qrcode'
+import { createApp } from 'vue'
 
-const app = createApp(App);
-// app.component('Vue3NextQrcode', Vue3NextQrcode);
-app.mount('#app');
+// Vuetify
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+
+// Components
+import App from './App.vue'
+
+const vuetify = createVuetify({
+  components,
+  directives,
+})
+
+createApp(App).use(vuetify).mount('#app')
